@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.juan.mp3player.MainActivity">
+
+    <SeekBar
+        android:id="@+id/songBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="101dp" />
+
+    <TextView
+        android:id="@+id/songtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/songBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/songClock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/songtxt"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+
+    <ListView
+        android:id="@+id/songs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/songtxt"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/playBTN"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songClock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/play_ico" />
+
+    <ImageButton
+        android:id="@+id/nextBTN"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/playBTN"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_toEndOf="@+id/playBTN"
+        android:layout_toRightOf="@+id/playBTN"
+        app:srcCompat="@drawable/next_ico" />
+
+    <ImageButton
+        android:id="@+id/prevBTN"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/playBTN"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_toLeftOf="@+id/playBTN"
+        android:layout_toStartOf="@+id/playBTN"
+        app:srcCompat="@drawable/previous_ico" />
+</RelativeLayout>
